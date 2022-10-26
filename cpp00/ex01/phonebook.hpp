@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:56:48 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/24 13:35:51 by bperron          ###   ########.fr       */
+/*   Updated: 2022/10/25 11:31:00 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 #define PHONEBOOK_HPP
 
 #include <string>
-#include "contact.hpp"
+#include "Contact.hpp"
 
-class phonebook{
+class Phonebook{
 private:
-	contact contacts[8];
+	Contact Contacts[8];
 	int		where;
 	int		total;
 public:
 	void	print_all();
 	void	add();
-	phonebook();
-	~phonebook();
+	Phonebook();
+	~Phonebook();
 };
 
 #endif

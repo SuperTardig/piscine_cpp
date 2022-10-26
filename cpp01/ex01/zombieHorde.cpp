@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 11:37:19 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 11:30:05 by bperron          ###   ########.fr       */
+/*   Created: 2022/10/25 13:14:40 by bperron           #+#    #+#             */
+/*   Updated: 2022/10/25 13:24:14 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#include "Zombie.hpp"
 
-#include <string>
-
-class Contact{
-private:
-	std::string	first;
-	std::string	last;
-	std::string	nick;
-	std::string	number;
-	std::string	secret;
-public:
-	void	add();
-	void	print_all(int i);
-	void	print_one();
-	Contact();
-	~Contact();
-};
-
-
-
-
-#endif
+Zombie *zombieHorde(int n, std::string name){
+	if (n > 0){
+		Zombie *hold;
+		Zombie *first = new Zombie(name);
+		hold = first;
+		for (int i = 1; i <= n; i++){
+			first->next = new Zombie(name);
+			first = first->next;
+		}
+		return (hold);
+	}
+	return (NULL);
+}

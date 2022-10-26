@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 11:37:19 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 11:30:05 by bperron          ###   ########.fr       */
+/*   Created: 2022/10/26 09:53:12 by bperron           #+#    #+#             */
+/*   Updated: 2022/10/26 10:54:36 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#include "Harl.hpp"
 
-#include <string>
-
-class Contact{
-private:
-	std::string	first;
-	std::string	last;
-	std::string	nick;
-	std::string	number;
-	std::string	secret;
-public:
-	void	add();
-	void	print_all(int i);
-	void	print_one();
-	Contact();
-	~Contact();
-};
-
-
-
-
-#endif
+int	main(){
+	Harl harl;
+	
+	harl.complain("debug");
+	harl.complain("info");
+	harl.complain("warning");
+	harl.complain("error");
+	harl.complain("");
+	harl.complain("lol");
+}

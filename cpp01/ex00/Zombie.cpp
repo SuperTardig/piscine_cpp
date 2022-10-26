@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 11:37:19 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 11:30:05 by bperron          ###   ########.fr       */
+/*   Created: 2022/10/25 11:19:41 by bperron           #+#    #+#             */
+/*   Updated: 2022/10/25 12:57:59 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#include "Zombie.hpp"
 
-#include <string>
+void Zombie::announce(void){
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
 
-class Contact{
-private:
-	std::string	first;
-	std::string	last;
-	std::string	nick;
-	std::string	number;
-	std::string	secret;
-public:
-	void	add();
-	void	print_all(int i);
-	void	print_one();
-	Contact();
-	~Contact();
-};
+Zombie::Zombie(std::string name){
+	this->name = name;
+}
 
-
-
-
-#endif
+Zombie::~Zombie(){
+	std::cout << this->name << " has been destroyed" << std::endl;
+}

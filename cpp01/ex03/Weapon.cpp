@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 11:37:19 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 11:30:05 by bperron          ###   ########.fr       */
+/*   Created: 2022/10/25 13:45:33 by bperron           #+#    #+#             */
+/*   Updated: 2022/10/26 08:04:26 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#include "Weapon.hpp"
+#include <iostream>
 
-#include <string>
+const std::string Weapon::getType(){
+	return (this->type);
+}
 
-class Contact{
-private:
-	std::string	first;
-	std::string	last;
-	std::string	nick;
-	std::string	number;
-	std::string	secret;
-public:
-	void	add();
-	void	print_all(int i);
-	void	print_one();
-	Contact();
-	~Contact();
-};
+void	Weapon::setType(std::string type){
+	this->type = type;
+}
 
+Weapon::Weapon(std::string type){
+	this->type = type;
+}
 
+Weapon::Weapon(){
+	this->type = "fist";
+}
 
-
-#endif
+Weapon::~Weapon(){
+	std::cout << "Weapon " << this->type << " has been destroyed" << std::endl; 
+}

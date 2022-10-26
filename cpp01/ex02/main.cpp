@@ -5,41 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 11:34:27 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 11:31:33 by bperron          ###   ########.fr       */
+/*   Created: 2022/10/25 13:29:20 by bperron           #+#    #+#             */
+/*   Updated: 2022/10/26 08:30:07 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Phonebook.hpp"
 
 int	main(){
-	Phonebook	book;
-	int			choice;
-	
-	choice = 0;
-	while (1){
-		std::cout << "1. ADD\n2. SEARCH\n3. EXIT\n>";
-		if (std::cin >> choice) switch (choice){
-		case (1):
-			book.add();
-			break;
-		case (2):
-			book.print_all();
-			break;
-		case (3):
-			std::cout << "Thank you for using my phonebook\n";
-			return (0);
-			break;
-		default:
-			std::cout << "please make a new choice\n";
-			choice = 0;
-			break;
-		}
-		else{
-            std::cout << "please enter a numeric argument\n";
-            std::cin.clear(); 
-            std::cin.ignore( 1000, '\n' );
-		}
-	}
+	std::string var = "HI THIS IS BRAIN";
+	std::string *ptr = &var;
+	std::string &ref = var;
+
+	std::cout << "Addres of var: " << &var << std::endl;
+	std::cout << "Addres of ptr: " << &ptr << std::endl;
+	std::cout << "Addres of ref: " << &ref << std::endl;
+	std::cout << "Value of var: " << var << std::endl;
+	std::cout << "Value of ptr: " << ptr << std::endl;
+	std::cout << "Value of ref: " << ref << std::endl;
+	return (0);
 }

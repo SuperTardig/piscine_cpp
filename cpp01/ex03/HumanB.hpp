@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 11:37:19 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 11:30:05 by bperron          ###   ########.fr       */
+/*   Created: 2022/10/25 13:46:38 by bperron           #+#    #+#             */
+/*   Updated: 2022/10/26 07:59:36 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
 
-#include <string>
+#include "Weapon.hpp"
+#include <iostream>
 
-class Contact{
+class HumanB{
 private:
-	std::string	first;
-	std::string	last;
-	std::string	nick;
-	std::string	number;
-	std::string	secret;
+	std::string name;
+	Weapon 		*type;
 public:
-	void	add();
-	void	print_all(int i);
-	void	print_one();
-	Contact();
-	~Contact();
+	HumanB(std::string name);
+	~HumanB();
+	void	attack();
+	void	setWeapon(Weapon &type);
 };
-
-
-
 
 #endif
