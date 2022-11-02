@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 11:26:15 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/27 10:46:06 by bperron          ###   ########.fr       */
+/*   Updated: 2022/11/02 08:16:04 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Fixed::Fixed() : nb(0){
 
 Fixed::Fixed(const Fixed &init){
 	//std::cout << "Copy Constructor called" << std::endl;
-	*this = init;
+	nb = init.getRawBits();
 }
 
 Fixed::Fixed(const int init){

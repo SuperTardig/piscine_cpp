@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 11:04:45 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/01 10:18:49 by bperron          ###   ########.fr       */
+/*   Updated: 2022/11/02 08:25:05 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,11 @@ ScavTrap::ScavTrap(std::string n) : ClapTrap(n){
 
 ScavTrap::ScavTrap(const ScavTrap &init){
 	std::cout << "ScavTrap copy constructor called" << std::endl;
-	*this = init;
+	this->name = init.name;
+	this->ep = init.ep;
+	this->ad = init.ad;
+	this->hp = init.hp;
+	this->guard = init.guard;
 }
 
 ScavTrap::~ScavTrap(){
@@ -46,6 +50,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &src){
 		this->ep = src.ep;
 		this->ad = src.ad;
 		this->hp = src.hp;
+		this->guard = src.guard;
 	}
 	return (*this);
 }

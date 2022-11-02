@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Claptrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 14:17:54 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/27 11:48:12 by bperron          ###   ########.fr       */
+/*   Updated: 2022/11/02 08:16:24 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ ClapTrap::ClapTrap(std::string n) : hp(10), ad(0), ep(10), name(n){
 
 ClapTrap::ClapTrap(const ClapTrap &init){
 	std::cout << "Claptrap copy constructor called" << std::endl;
-	*this = init;
+	this->name = init.name;
+	this->ep = init.ep;
+	this->ad = init.ad;
+	this->hp = init.hp;
 }
 
 ClapTrap::~ClapTrap(){

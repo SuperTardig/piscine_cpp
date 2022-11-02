@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 11:04:45 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/01 10:12:11 by bperron          ###   ########.fr       */
+/*   Updated: 2022/11/02 08:22:15 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,10 @@ FragTrap::FragTrap(std::string n) : ClapTrap(n){
 
 FragTrap::FragTrap(const FragTrap &init){
 	std::cout << "FragTrap copy constructor called" << std::endl;
-	*this = init;
+	this->name = init.name;
+	this->ep = init.ep;
+	this->ad = init.ad;
+	this->hp = init.hp;;
 }
 
 FragTrap::~FragTrap(){
