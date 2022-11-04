@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 08:06:57 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/26 09:47:30 by bperron          ###   ########.fr       */
+/*   Updated: 2022/11/04 11:44:59 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	main(int ac,char **av){
 						new_file << hold << "\n";
 					}
 				}
+				file.close();
+				new_file.close();
 			}
 			else
 				std::cout << "There was an error during file opening" << std::endl;

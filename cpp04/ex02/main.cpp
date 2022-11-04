@@ -15,7 +15,7 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongCat.hpp"
-#include <ctime>
+#include <cstdlib>
 
 int main()
 {
