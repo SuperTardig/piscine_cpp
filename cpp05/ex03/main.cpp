@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 07:51:44 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/04 14:26:21 by bperron          ###   ########.fr       */
+/*   Updated: 2022/11/07 10:43:46 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@
 
 int main(){
 	Bureaucrat	senior(5, "senior");
-	Bureaucrat junior(70, "junior");
+	Bureaucrat	junior(70, "junior");
 	Intern		intern;
-	AForm	*form1;
-	AForm	*form2;
-	AForm	*form3;
-	AForm	*form4;
-	AForm	*form5;
-	AForm	*form6;
+	AForm		*form1 = NULL;
+	AForm		*form2 = NULL;
+	AForm		*form3 = NULL;
+	AForm		*form4 = NULL;
+	AForm		*form5 = NULL;
+	AForm		*form6 = NULL;
 
 	form1 = intern.makeForm("shrubbery creation", "home");
-	form2 = intern.makeForm("shrubbery creation", "home2");
+	form2 = intern.makeForm("shrubbery creation", "office");
 	form3 = intern.makeForm("robotomy request", "john");
 	form4 = intern.makeForm("robotomy request", "bob");
 	form5 = intern.makeForm("presidential pardon", "pablo escobar");

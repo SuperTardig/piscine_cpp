@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:57:18 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/04 13:27:27 by bperron          ###   ########.fr       */
+/*   Updated: 2022/11/07 10:32:36 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	AForm();
 	AForm(string n, int s, int e);
 	AForm(const AForm &init);
-	~AForm();
+	virtual ~AForm();
 	AForm &operator=(const AForm &src);
 
 	string	getName() const;

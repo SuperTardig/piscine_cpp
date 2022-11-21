@@ -78,12 +78,16 @@ void	Form::setStatus(){
 }
 
 void	Form::beSigned(Bureaucrat &dude){
-	if (dude.getGrade() > this->sign){
+	if (this->getStatus() == false){
+		if (dude.getGrade() > this->sign){
+			signForm(dude);
+			throw GradeTooLowException();
+		}
+		setStatus();
 		signForm(dude);
-		throw GradeTooLowException();
 	}
-	setStatus();
-	signForm(dude);
+	else
+		cout << executor.getName() << " couldn't sign the form because it was already signed" << endl;
 	return;
 }
 

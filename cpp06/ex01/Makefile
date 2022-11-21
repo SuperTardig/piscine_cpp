@@ -6,7 +6,7 @@
 #    By: bperron <bperron@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 14:30:12 by bperron           #+#    #+#              #
-#    Updated: 2022/11/07 10:41:44 by bperron          ###   ########.fr        #
+#    Updated: 2022/11/08 14:03:58 by bperron          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ CC = c++
 CFLAGS = -Werror -Wall -Wextra -std=c++98
 RM = rm -rf
 
-NAME = form
+NAME = serialize
 
-SRCS = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp intern.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 12:37:27 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/04 13:26:53 by bperron          ###   ########.fr       */
+/*   Updated: 2022/11/09 13:03:21 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,7 @@ int	PresidentialPardonForm::execute(Bureaucrat const &executor) const{
 			return 1;
 		}
 	}
+	else 
+		cout << executor.getName() << " couldn't execute the form because it wasn't signed" << endl;
 	return 0;
 }
