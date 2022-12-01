@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   easyfind.tpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 09:22:16 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/22 07:59:52 by bperron          ###   ########.fr       */
+/*   Created: 2022/11/22 08:13:49 by bperron           #+#    #+#             */
+/*   Updated: 2022/11/22 10:51:59 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "easyfind.hpp"
 
-#include <iostream>
-
-using std::cout;
-using std::endl;
-using std::string;
-
-template <typename T> void iter(T *arr, int len, void(*f)(T &value)){
-	for (int i = 0; i < len; i++)
-		f(arr[i]);
-}
-
-template <typename T> void iter(const T *arr, int len, void(*f)(const T &value)){
-	for (int i = 0; i < len; i++)
-		f(arr[i]);
+template <typename T>
+typename T::iterator easyfind(T src, int to_find){
+	typename T::iterator pos;
+	
+	pos = std::find(src.begin(), src.end(), to_find);
+	if (pos != src.end())
+		return pos;
+	else
+		throw DoesntExistException();
 }

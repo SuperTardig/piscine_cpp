@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 09:22:16 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/22 07:59:52 by bperron          ###   ########.fr       */
+/*   Created: 2022/11/22 10:02:37 by bperron           #+#    #+#             */
+/*   Updated: 2022/11/22 10:51:09 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include <exception>
+#include <algorithm>
+#include <iterator>
+#include <vector>
+#include <deque>
+#include <list>
+#include <array>
+#include <forward_list>
 
-using std::cout;
-using std::endl;
-using std::string;
-
-template <typename T> void iter(T *arr, int len, void(*f)(T &value)){
-	for (int i = 0; i < len; i++)
-		f(arr[i]);
-}
-
-template <typename T> void iter(const T *arr, int len, void(*f)(const T &value)){
-	for (int i = 0; i < len; i++)
-		f(arr[i]);
-}
+class DoesntExistException : public std::exception{
+	public:
+			virtual const char *what() const throw(){return ("The number you're looking for doesn't exist in the given container");};
+};
