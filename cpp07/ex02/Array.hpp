@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 09:47:24 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/18 14:21:00 by bperron          ###   ########.fr       */
+/*   Updated: 2022/12/17 07:47:14 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ using std::cout;
 using std::string;
 using std::endl;
 
-template <class T> class Array{
+template <typename T> class Array{
 	private:
 		T 				*arr;
 		unsigned int	len;

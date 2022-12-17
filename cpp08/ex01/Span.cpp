@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 12:47:09 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/24 13:46:05 by bperron          ###   ########.fr       */
+/*   Updated: 2022/12/14 12:53:14 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ Span::Span(const Span &src) : size(src.size){
 /* 	vec.swap(src); */
 }
 
-Span::~Span(){
-}
+Span::~Span(){}
 
 void	Span::addNumber(int n){
 	if (vec.size() > size)

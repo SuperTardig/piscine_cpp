@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:37:10 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 11:30:36 by bperron          ###   ########.fr       */
+/*   Updated: 2022/12/14 10:54:39 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,23 @@
 void	Contact::add(){
 	while (this->first.empty()){
 		std::cout << "please enter the first name of the Contact: ";
-		std::cin >> this->first;
+		std::getline(std::cin, this->first);
 	}
 	while (this->last.empty()){
 		std::cout << "please enter the last name of the Contact: ";
-		std::cin >> this->last;
+		std::getline(std::cin, this->last);
 	}
 	while (this->nick.empty()){
 		std::cout << "please enter the nickname of the Contact: ";
-		std::cin >> this->nick;
+		std::getline(std::cin, this->nick);
 	}
 	while (this->number.empty()){
 		std::cout << "please enter the phone number of the Contact: ";
-		std::cin >> this->number;
+		std::getline(std::cin, this->number);
 	}
 	while (this->secret.empty()){
 		std::cout << "please enter the darkest secret of the Contact: ";
-		std::cin >> this->secret;
+		std::getline(std::cin, this->secret);
 	}
 }
 
