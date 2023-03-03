@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 09:53:25 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/26 11:17:07 by bperron          ###   ########.fr       */
+/*   Updated: 2023/02/24 11:16:45 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	Harl::error(){
 }
 
 void	Harl::redir(int i){
-	void	(Harl::*ptr[4])() = {
+	void	(Harl:4]:*ptr[)() = {
 		&Harl::debug,
 		&Harl::info,
 		&Harl::warning,

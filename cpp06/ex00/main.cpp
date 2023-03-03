@@ -38,7 +38,7 @@ void	print_char(double nb){
 		cout << "non printable" << endl;
 		return;
 	}
-	cout << "'" <<static_cast<char>(nb) << "'" << endl;
+	cout << "'" << static_cast<char>(nb) << "'" << endl;
 	return;
 }
 
