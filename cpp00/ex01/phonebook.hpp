@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:56:48 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/03 09:42:08 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/07 08:29:39 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define PHONEBOOK_HPP
 
 #include "Contact.hpp"
-#include <string>
+#include <iomanip>
 
 class Phonebook {
 private:

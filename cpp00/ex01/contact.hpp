@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:37:19 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/03 09:48:25 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/07 08:30:42 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define CONTACT_HPP
 
 #include <string>
+#include <iomanip>
 
 class Contact {
 private:

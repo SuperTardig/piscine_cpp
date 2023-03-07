@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:34:27 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/03 11:04:43 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/07 08:20:50 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main() {
   while (1) {
     std::cout << "1. ADD\n2. SEARCH\n3. EXIT\n>";
     getline(std::cin, choice);
-    if (choice == "ADD") // fuck quand ya plus que huit affaire
+    if (choice == "ADD")
       book.add();
     else if (choice == "SEARCH")
       book.print_all();
