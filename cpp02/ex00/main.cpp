@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 11:23:38 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/08 13:51:34 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 14:06:15 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main() {
   Fixed a;
-  a.setRawBits(5);
   Fixed b(a);
+  a.setRawBits(5);
   Fixed c;
 
   c = b;

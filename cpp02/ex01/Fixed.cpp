@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 11:26:15 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/08 13:51:30 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 14:10:52 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ Fixed::Fixed(const Fixed &init) {
   nb = init.getRawBits();
 }
 
-Fixed::Fixed(const int init) {
+Fixed::Fixed(const int &init) {
   std::cout << "Int constructor called" << std::endl;
   this->setRawBits(init << fb);
 }
 
-Fixed::Fixed(const float init) {
+Fixed::Fixed(const float &init) {
   std::cout << "Float constructor called" << std::endl;
   this->setRawBits(roundf(init * 256));
 }

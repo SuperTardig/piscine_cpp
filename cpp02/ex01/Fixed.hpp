@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 11:25:27 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/08 13:51:25 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 14:10:12 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ private:
 public:
   Fixed();
   Fixed(const Fixed &init);
-  Fixed(const int init);
-  Fixed(const float init);
+  Fixed(const int &init);
+  Fixed(const float &init);
   ~Fixed();
   Fixed &operator=(const Fixed &src);
   int getRawBits() const;
