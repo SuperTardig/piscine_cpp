@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:55:40 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/07 11:46:08 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 07:58:32 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ void Phonebook::print_all() {
     std::cout << "there is currently no Contacts in your phonebook\n";
 }
 
-int Phonebook::get_total() { return (this->total); }
+const int &Phonebook::get_total() const { return (this->total); }
 
-int Phonebook::get_where() { return (this->where); }
+const int &Phonebook::get_where() const { return (this->where); }
 
 void Phonebook::set_total(int n) { this->total = n; }
 

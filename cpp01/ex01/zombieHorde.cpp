@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:14:40 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 13:24:14 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 08:03:39 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,10 @@
 
 Zombie *zombieHorde(int n, std::string name){
 	if (n > 0){
-		Zombie *hold;
-		Zombie *first = new Zombie(name);
-		hold = first;
-		for (int i = 1; i <= n; i++){
-			first->next = new Zombie(name);
-			first = first->next;
-		}
-		return (hold);
+		Zombie *horde = new Zombie[n];
+		for (int i = 0; i < n; i++)
+			horde[i].set_name(name);
+		return (horde);
 	}
 	return (NULL);
 }

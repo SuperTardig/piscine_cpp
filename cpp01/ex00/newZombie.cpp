@@ -6,12 +6,10 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 11:19:51 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 13:06:03 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 07:52:27 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie *newZombie(std::string name){
-	return (new Zombie(name));
-}
+Zombie *newZombie(const std::string &name) { return (new Zombie(name)); }

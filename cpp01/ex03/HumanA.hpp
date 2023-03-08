@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:46:29 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 14:23:06 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 08:39:31 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 #define HUMANA_HPP
 
 #include "Weapon.hpp"
-#include <iostream>
 
-class HumanA{
+class HumanA {
 private:
-	std::string name;
-	Weapon 		&weapon;
+  std::string name;
+  Weapon &weapon;
+
 public:
-	HumanA(std::string name, Weapon &type);
-	~HumanA();
-	void	attack();
+  HumanA(const std::string &name, Weapon &type);
+  ~HumanA();
+
+  const std::string &get_name() const;
+  void set_name(const std::string &name);
+  void attack();
 };
 
 #endif

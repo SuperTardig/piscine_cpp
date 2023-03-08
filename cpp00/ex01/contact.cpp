@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:37:10 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/07 13:21:42 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 07:52:24 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,15 +65,18 @@ void Contact::add() {
 void Contact::print_all(int i) {
   std::cout << std::right << std::setw(10) << i << "|";
   if (this->get_first().size() > 9)
-    std::cout << std::right << std::setw(9) << this->get_first().substr(0, 9) << ".|";
+    std::cout << std::right << std::setw(9) << this->get_first().substr(0, 9)
+              << ".|";
   else
     std::cout << std::right << std::setw(10) << this->get_first() << "|";
   if (this->get_last().size() > 9)
-    std::cout << std::right << std::setw(9) << this->get_last().substr(0, 9) << ".|";
+    std::cout << std::right << std::setw(9) << this->get_last().substr(0, 9)
+              << ".|";
   else
     std::cout << std::right << std::setw(10) << this->get_last() << "|";
   if (this->get_nick().size() > 9)
-    std::cout << std::right << std::setw(9) << this->get_nick().substr(0, 9) << "." << std::endl;
+    std::cout << std::right << std::setw(9) << this->get_nick().substr(0, 9)
+              << "." << std::endl;
   else
     std::cout << std::right << std::setw(10) << this->get_nick() << std::endl;
 }

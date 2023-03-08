@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 09:53:25 by bperron           #+#    #+#             */
-/*   Updated: 2023/02/24 11:16:45 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 10:41:58 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,22 @@ void	Harl::error(){
 }
 
 void	Harl::redir(int i){
-	void	(Harl:4]:*ptr[)() = {
+	void	(Harl::*ptr[4])() = {
 		&Harl::debug,
 		&Harl::info,
 		&Harl::warning,
 		&Harl::error
 	};
-	while (i < 4)
-		(*this.*ptr[i++])();
+	switch (i){
+		case 0:
+			(*this.*ptr[0])();
+		case 1:
+			(*this.*ptr[1])();
+		case 2:
+			(*this.*ptr[2])();
+		case 3:
+			(*this.*ptr[3])();
+	}
 }
 
 void	Harl::complain(std::string level){
@@ -60,8 +68,8 @@ Harl::~Harl(){
 }
 
 const std::string Harl::levels[4] = {
-	"debug",
-	"info",
-	"warning",
-	"error" 
+	"DEBUG",
+	"INFO",
+	"WARNING",
+	"ERROR" 
 };

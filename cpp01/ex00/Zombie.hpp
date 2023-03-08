@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 11:19:46 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/25 13:05:58 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 08:01:27 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,21 @@
 #include <iostream>
 #include <string>
 
-class Zombie{
+class Zombie {
 private:
-	std::string name;
+  std::string name;
+
 public:
-	Zombie(std::string name);
-	~Zombie();
-	void announce(void);
+  Zombie(const std::string &name);
+  ~Zombie();
+  
+  void set_name(const std::string &name);
+  const std::string &get_name() const;
+  
+  void announce(void);
 };
 
-void	randomChump(std::string name);
-Zombie	*newZombie(std::string name);
+void randomChump(const std::string &name);
+Zombie *newZombie(const std::string &name);
 
 #endif
