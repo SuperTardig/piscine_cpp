@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 11:25:27 by bperron           #+#    #+#             */
-/*   Updated: 2022/10/26 14:05:43 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 13:51:37 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,18 @@
 
 #include <iostream>
 
-class Fixed{
+class Fixed {
 private:
-	int					nb;
-	static const int	fb; 
+  int nb;
+  static const int fb;
+
 public:
-	Fixed();
-	Fixed(const Fixed &init);
-	Fixed &operator=(const Fixed &src);
-	~Fixed();
-	int		getRawBits() const;
-	void	setRawBits(int const raw);
+  Fixed();
+  Fixed(const Fixed &init);
+  Fixed &operator=(const Fixed &src);
+  ~Fixed();
+  int getRawBits() const;
+  void setRawBits(int const raw);
 };
 
 #endif
