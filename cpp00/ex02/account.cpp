@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:30:03 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/03 09:42:15 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/08 12:01:24 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ bool Account::makeWithdrawal(int withdrawal) {
   _totalAmount -= withdrawal;
   this->_amount -= withdrawal;
   this->_nbWithdrawals++;
-  std::cout << " index:" << _accountIndex << ";p_amount:" << this->_amount
+  std::cout << " index:" << _accountIndex
+            << ";p_amount:" << this->_amount + withdrawal
             << ";withdrawal:" << withdrawal << ";amount:" << this->_amount
             << ";nb_withdrawals:" << this->_nbWithdrawals << std::endl;
   return (true);
