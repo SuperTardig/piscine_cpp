@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bperron <bperron@student.42.fr>            +#+  +:+       +#+         #
+#    By: tardig <tardig@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 14:30:12 by bperron           #+#    #+#              #
-#    Updated: 2022/10/27 07:44:09 by bperron          ###   ########.fr        #
+#    Updated: 2023/03/09 16:49:49 by tardig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ RM = rm -rf
 
 NAME = claptrap
 
-SRCS = main.cpp Claptrap.cpp
+SRCS = main.cpp ClapTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
