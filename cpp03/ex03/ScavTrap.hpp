@@ -6,7 +6,7 @@
 /*   By: tardig <tardig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 11:03:56 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/10 16:58:16 by tardig           ###   ########.fr       */
+/*   Updated: 2023/03/10 20:01:58 by tardig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
-private:
+class ScavTrap : virtual public ClapTrap {
+protected:
   bool guard;
 
 public:
