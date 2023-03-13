@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 11:04:45 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/13 07:38:18 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/13 08:30:02 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ ScavTrap::ScavTrap(std::string n) : ClapTrap(n) {
 
 ScavTrap::ScavTrap(const ScavTrap &init) {
   std::cout << "ScavTrap copy constructor called" << std::endl;
-  this->set_name(src.get_name());
-  this->set_ep(src.get_ep());
-  this->set_ad(src.get_ad());
-  this->set_hp(src.get_hp());
-  this->set_guard(src.get_guard());
+  this->set_name(init.get_name());
+  this->set_ep(init.get_ep());
+  this->set_ad(init.get_ad());
+  this->set_hp(init.get_hp());
+  this->set_guard(init.get_guard());
 }
 
 ScavTrap::~ScavTrap() { std::cout << "ScavTrap destrutor called" << std::endl; }
