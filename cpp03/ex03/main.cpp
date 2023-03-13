@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 14:18:47 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/01 10:23:31 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/13 07:50:19 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int main(){
 	ScavTrap scav("Scavy");
 	FragTrap frag("Fraggy");
 	DiamondTrap diam("diamy");
+	DiamondTrap test(diam);
+	DiamondTrap test2("lol");
 	
 	std::cout << std::endl << std::endl;
 	clap.attack("Clappier");
@@ -42,5 +44,9 @@ int main(){
 	diam.takeDamage(10);
 	diam.guardGate();
 	diam.WhoAmI();
+	test.WhoAmI();
+	test2.WhoAmI();
+	test2 = test;
+	test2.WhoAmI();
 	std::cout << std::endl << std::endl;
 }
