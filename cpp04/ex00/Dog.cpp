@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 13:20:39 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/02 08:29:22 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/14 08:14:13 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog() : Animal("dog"){
 
 Dog::Dog(const Dog &init){
 	std::cout << "Dog copy constructor called" << std::endl;
-	type = init.type;
+	this->setType(init.getType());
 }
 
 Dog::~Dog(){
@@ -28,7 +28,7 @@ Dog::~Dog(){
 Dog &Dog::operator=(const Dog &src){	
 	std::cout << "Dog copy assignment operator called" << std::endl;
 	if (this != &src)
-		this->type = src.type;
+		this->setType(src.getType());
 	return (*this);
 }
 

@@ -6,13 +6,13 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 14:12:17 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/02 08:27:04 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/14 08:12:12 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal() : type("some type of animal"){
+WrongAnimal::WrongAnimal() : type("some type of bad animal"){
 	std::cout << "WrongAnimal default constructor called" << std::endl;
 }
 
@@ -20,9 +20,8 @@ WrongAnimal::WrongAnimal(std::string name) : type(name){
 	std::cout << "WrongAnimal constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &init){
+WrongAnimal::WrongAnimal(const WrongAnimal &init) : type(init.getType()){
 	std::cout << "WrongAnimal copy constructor called" << std::endl;
-	type = init.type;
 }
 
 WrongAnimal::~WrongAnimal(){
@@ -32,14 +31,15 @@ WrongAnimal::~WrongAnimal(){
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &src){	
 	std::cout << "WrongAnimal copy assignment operator called" << std::endl;
 	if (this != &src)
-		this->type = src.type;
+		this->setType(src.getType());
 	return (*this);
 }
 
-std::string WrongAnimal::getType() const{
-	return (this->type);
-}
+const std::string &WrongAnimal::getType() const { return (this->type); }
+
+void WrongAnimal::setType(const std::string &type) { this->type = type; }
+
 
 void		WrongAnimal::makeSound() const{
-		std::cout << "Weird animalistic noise echoes from behind you" << std::endl;
+		std::cout << "hi im bob" << std::endl;
 }

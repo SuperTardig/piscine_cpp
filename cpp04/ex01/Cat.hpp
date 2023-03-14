@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 10:53:32 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/02 10:34:17 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/14 13:15:43 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,20 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Cat : virtual public Animal{
+class Cat : virtual public Animal {
 private:
-	Brain *brain;
-public:
-	Cat();
-	Cat(const Cat &init);
-	~Cat();
-	Cat &operator=(const Cat &src);
 
-	void	makeSound() const;
-	void	showIdea(int i);
+public:
+  Brain *brain;
+  Cat();
+  Cat(const Cat &init);
+  ~Cat();
+  Cat &operator=(const Cat &src);
+
+  void setIdea(const std::string &str, const int &i);
+
+  void makeSound() const;
+  void showIdea(int i);
 };
 
 #endif

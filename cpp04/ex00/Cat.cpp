@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 13:21:05 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/02 08:26:30 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/14 08:14:07 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat() : Animal("cat"){
 
 Cat::Cat(const Cat &init){
 	std::cout << "Cat copy constructor called" << std::endl;
-	type = init.type;
+	this->setType(init.getType());
 }
 
 Cat::~Cat(){
@@ -28,7 +28,7 @@ Cat::~Cat(){
 Cat &Cat::operator=(const Cat &src){	
 	std::cout << "Cat copy assignment operator called" << std::endl;
 	if (this != &src)
-		this->type = src.type;
+		this->setType(src.getType());
 	return (*this);
 }
 
