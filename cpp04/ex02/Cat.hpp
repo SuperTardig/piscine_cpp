@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 10:53:32 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/14 14:09:21 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/15 08:39:20 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 class Cat : virtual public AAnimal {
 private:
+  Brain *brain;
 
 public:
-  Brain *brain;
   Cat();
   Cat(const Cat &init);
   ~Cat();

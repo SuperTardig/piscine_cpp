@@ -71,7 +71,7 @@ int main() {
   std::cout << std::endl << std::endl;
   test.showIdea(1);
   test2.showIdea(1);
-  std::cout << &test.brain << " " << &test2.brain << std::endl;
+//  std::cout << &test.brain << " " << &test2.brain << std::endl;
   test.setIdea("something else", 1);
   test.showIdea(1);
   test2.showIdea(1);
