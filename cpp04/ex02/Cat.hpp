@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 10:53:32 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/15 08:39:20 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/16 10:03:32 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Cat : virtual public AAnimal {
+class Cat : public AAnimal {
 private:
   Brain *brain;
 

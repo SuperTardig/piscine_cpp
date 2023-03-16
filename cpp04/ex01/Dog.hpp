@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 10:48:37 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/14 12:50:33 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/16 10:03:46 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : virtual public Animal {
+class Dog : public Animal {
 private:
   Brain *brain;
 

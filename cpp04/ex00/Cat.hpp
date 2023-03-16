@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 10:53:32 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/01 14:10:14 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/16 10:03:55 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "Animal.hpp"
 
-class Cat : virtual public Animal{
+class Cat : public Animal{
 public:
 	Cat();
 	Cat(const Cat &init);
