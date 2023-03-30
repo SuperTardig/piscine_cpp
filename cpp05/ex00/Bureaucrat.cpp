@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 07:52:07 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/03 10:56:59 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/30 08:39:19 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ Bureaucrat::~Bureaucrat(){
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src){
 	std::cout << "Bureaucrat copy assignement operator called" << std::endl;
-	grade = src.grade;
+	if (this != &src)
+		grade = src.grade;
 	return (*this);
 }
 

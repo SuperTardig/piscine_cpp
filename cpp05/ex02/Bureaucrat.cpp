@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 07:52:07 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/04 13:29:59 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/30 08:45:47 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,16 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src){
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &dude){
 	os << "Hi, my name is " << dude.getName() << " and my grade is " << dude.getGrade();
 	return (os);
+}
+
+void Bureaucrat::signForm(AForm &form) const {
+  if (form.getStatus() == true)
+    cout << getName() << " signed " << form.getName() << endl;
+  else
+    cout << getName() << " couldn't sign " << form.getName()
+         << " because his grade is " << getGrade()
+         << " and the grade required to sign is " << form.getSign() << endl;
+  return;
 }
 
 std::string Bureaucrat::getName() const{

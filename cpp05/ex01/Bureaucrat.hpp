@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 07:51:57 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/04 08:46:53 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/30 08:39:55 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 using std::cout;
 using std::string;
 using std::endl;
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat{
 private:
@@ -27,6 +30,7 @@ public:
 	Bureaucrat(int i, string n);
 	~Bureaucrat();
 	Bureaucrat &operator=(const Bureaucrat &src);
+	void	signForm(Form &form) const;
 
 	string	getName() const;
 	int		getGrade() const;

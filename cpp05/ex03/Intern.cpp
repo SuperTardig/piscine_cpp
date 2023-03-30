@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 13:42:56 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/07 10:31:52 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/30 08:59:02 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,15 @@ AForm *Intern::makeForm(string name, string target){
 	{
 	case 0:
 		form = new ShrubberyCreationForm(target);
+		cout << "Intern creates " << name << endl << endl; 
 		break;
 	case 1:
 		form = new RobotomyRequestForm(target);
+		cout << "Intern creates " << name << endl << endl; 
 		break;
 	case 2:
 		form = new PresidentialPardonForm(target);
+		cout << "Intern creates " << name << endl << endl; 
 		break;
 	default:
 		cout << "The form that the intern tried to create doesn't exist" << endl;

@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 07:51:44 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/04 13:23:01 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/30 08:48:22 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int main(){
 	try
 	{
 		form1.beSigned(senior);
+		senior.signForm(form1);
 		senior.executeForm(form1);
 	}
 	catch(const std::exception& e)
@@ -39,6 +40,7 @@ int main(){
 	try
 	{
 		form2.beSigned(junior);
+		junior.signForm(form2);
 		junior.executeForm(form2);
 	}
 	catch(const std::exception& e)
@@ -49,6 +51,7 @@ int main(){
 	try
 	{
 		form3.beSigned(senior);
+		senior.signForm(form3);
 		senior.executeForm(form3);
 	}
 	catch(const std::exception& e)
@@ -59,6 +62,7 @@ int main(){
 	try
 	{
 		form4.beSigned(junior);
+		junior.signForm(form4);
 		junior.executeForm(form4);
 	}
 	catch(const std::exception& e)
@@ -69,6 +73,7 @@ int main(){
 	try
 	{
 		form5.beSigned(senior);
+		senior.signForm(form5);
 		senior.executeForm(form5);
 	}
 	catch(const std::exception& e)
@@ -79,6 +84,7 @@ int main(){
 	try
 	{
 		form6.beSigned(junior);
+		junior.signForm(form6);
 		junior.executeForm(form6);
 	}
 	catch(const std::exception& e)

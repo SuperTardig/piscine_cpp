@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 07:51:44 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/07 10:43:46 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/30 08:59:09 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main(){
 	form4 = intern.makeForm("robotomy request", "bob");
 	form5 = intern.makeForm("presidential pardon", "pablo escobar");
 	form6 = intern.makeForm("presidential pardon", "joe exotic");
-	cout << endl << endl << "test 1" << endl;
+	cout << endl << "test 1" << endl;
 	try
 	{
 		form1->beSigned(senior);

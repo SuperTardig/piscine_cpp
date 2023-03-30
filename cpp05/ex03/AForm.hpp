@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:57:18 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/07 10:32:36 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/30 08:55:06 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ private:
 	const int		sign;
 	const int		exe;
 	bool			status;
-	void			signForm(Bureaucrat &dude) const;
 public:
 	AForm();
 	AForm(string n, int s, int e);

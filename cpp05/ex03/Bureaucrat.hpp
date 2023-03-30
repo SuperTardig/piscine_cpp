@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 07:51:57 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/04 13:08:35 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/30 08:55:19 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ public:
 	int		getGrade() const;
 	void	gradeUp();
 	void	gradeDown();
+	void	signForm(AForm &form) const;
 	void	executeForm(AForm const &form);
 
 	class GradeTooHighException : public std::exception

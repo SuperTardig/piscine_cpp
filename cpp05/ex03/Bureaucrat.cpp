@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 07:52:07 by bperron           #+#    #+#             */
-/*   Updated: 2023/02/10 10:25:25 by bperron          ###   ########.fr       */
+/*   Updated: 2023/03/30 08:56:00 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,16 @@ std::ostream &operator<<(std::ostream &os, const Bureaucrat &dude){
 	return (os);
 }
 
+void Bureaucrat::signForm(AForm &form) const {
+  if (form.getStatus() == true)
+    cout << getName() << " signed " << form.getName() << endl;
+  else
+    cout << getName() << " couldn't sign " << form.getName()
+         << " because his grade is " << getGrade()
+         << " and the grade required to sign is " << form.getSign() << endl;
+  return;
+}
+
 std::string Bureaucrat::getName() const{
 	return name;
 }
@@ -80,10 +90,9 @@ void	Bureaucrat::gradeDown(){
 }
 
 void	Bureaucrat::executeForm(AForm const &form){
-	if (form.execute(*this) == 1){
+	if (form.execute(*this) == 1)
 		cout << name << " couldn't execute the form due to his grade being to low" << endl;
-		return;
-	}
-	cout << name << " executed " << form.getName() << endl;
+	else
+		cout << name << " executed " << form.getName() << endl;
 	return;
 }
