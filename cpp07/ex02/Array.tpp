@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:07:41 by bperron           #+#    #+#             */
-/*   Updated: 2023/04/03 14:15:17 by bperron          ###   ########.fr       */
+/*   Updated: 2023/04/03 14:18:21 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 template <class T> Array<T>::Array() : arr(NULL), len(0) {}
 
-template <class T> Array<T>::Array(unsigned int n) : len(n) {
-  arr = new T[n];
+template <class T> Array<T>::Array(unsigned int n) : arr(new T[n]), len(n) {
 }
 
 template <class T> Array<T>::Array(Array<T> const &init) : len(init.len) {
