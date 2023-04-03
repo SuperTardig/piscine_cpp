@@ -64,13 +64,19 @@ void	print_type(double val){
 
 int	findType(string val){
 	int	dot = 0;
+	int	offset;
+
+	if (val.at(0) == '+' || val.at(0) == '-')
+		offset = 1;
+	else
+		offset = 0;
 
 	if (val.size() == 1 && isdigit(val.at(0)) == false)
 		return (1);
 	else if (val.find('.', 0) != val.npos)
 	{
 		if (val.find('f', 0) != val.npos){
-			for (size_t i = 0; i < val.size() - 1; i++){
+			for (size_t i = 0 + offset; i < val.size() - 1; i++){
 				if (val.at(i) == '.')
 					dot++;
 				else if (isdigit(val.at(i)) == false)
@@ -81,7 +87,7 @@ int	findType(string val){
 			return 4;
 		}
 		else {
-			for (size_t i = 0; i < val.size(); i++){
+			for (size_t i = 0 + offset; i < val.size(); i++){
 				if (val.at(i) == '.')
 					dot++;
 				else if (isdigit(val.at(i)) == false)
@@ -93,7 +99,7 @@ int	findType(string val){
 		}
 	}
 	else{
-		for (size_t i = 0; i <val.size() ; i++)
+		for (size_t i = 0 + offset; i <val.size() ; i++)
 			if (isdigit(val.at(i)) == false)
 					return -1;
 		if (atoi(val.c_str()) != atol(val.c_str()))
