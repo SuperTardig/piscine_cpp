@@ -6,12 +6,11 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 08:11:44 by bperron           #+#    #+#             */
-/*   Updated: 2022/11/22 10:24:12 by bperron          ###   ########.fr       */
+/*   Updated: 2023/04/03 14:16:24 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
-#include "Array.tpp"
 
 #define MAX_VAL 750
 
@@ -24,11 +23,10 @@ int main()
     srand(time(NULL));
     for (int i = 0; i < MAX_VAL; i++)
     {
-        const int value = rand();
+        const int value = rand() % 100;
         numbers[i] = value;
         mirror[i] = value;
     }
-    //SCOPE
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);
@@ -79,11 +77,11 @@ int main()
         cout << numbers[i] << endl;
     for (int i = 0; i < MAX_VAL; i++)
     {
-        numbers[i] = rand();
+        numbers[i] = rand() % 100;
     }
+    cout << endl << "new numbers" << endl << endl;
     for (int i = 0; i < 10; i++)
         cout << numbers[i] << endl;
-    delete [] mirror;//
+    delete [] mirror;
     return 0;
 }
-// essayer de crere  avec  une size de 0
