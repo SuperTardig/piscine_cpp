@@ -6,7 +6,7 @@
 /*   By: bperron <bperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 12:47:09 by bperron           #+#    #+#             */
-/*   Updated: 2023/03/07 13:03:18 by bperron          ###   ########.fr       */
+/*   Updated: 2023/04/04 07:50:31 by bperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,7 @@ Span::Span() : size(0), vec(0) {}
 
 Span::Span(int n) : size(n), vec(0) {}
 
-Span::Span(const Span &src) : size(src.size) {
-  vec.resize(src.size);
-  /* 	vec.swap(src); */
-}
+Span::Span(const Span &src) : size(src.size) { vec.resize(src.size); }
 
 Span::~Span() {}
 
@@ -33,6 +30,7 @@ void Span::bigAddNumber(int n) {
   if (vec.size() + n > size)
     throw FullExecption();
   std::vector<int> hold(n);
+  srand(time(0));
   std::generate(hold.begin(), hold.end(), rand);
   vec.insert(vec.end(), hold.begin(), hold.end());
 }
