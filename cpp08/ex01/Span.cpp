@@ -14,7 +14,7 @@
 
 Span::Span() : size(0), vec(0) {}
 
-Span::Span(int n) : size(n), vec(0) {}
+Span::Span(unsigned int n) : size(n), vec(0) {}
 
 Span::Span(const Span &src) : size(src.size) { vec.resize(src.size); }
 
