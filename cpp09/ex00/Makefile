@@ -6,7 +6,7 @@
 #    By: bperron <bperron@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 14:30:12 by bperron           #+#    #+#              #
-#    Updated: 2023/04/04 09:56:18 by bperron          ###   ########.fr        #
+#    Updated: 2023/04/05 07:37:13 by bperron          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ RM = rm -rf
 
 NAME = btc
 
-SRCS = main.cpp
+SRCS = main.cpp BitcoinExchange.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
