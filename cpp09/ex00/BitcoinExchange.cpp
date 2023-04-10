@@ -12,7 +12,7 @@ BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &init) {
 
 BitcoinExchange::BitcoinExchange(const BitcoinExchange &src) { *this = src; }
 
-BitcoinExchange::BitcoinExchange(string input) {
+BitcoinExchange::BitcoinExchange(const string &input) {
   std::ifstream file("data.csv");
   string date, hold;
   float rate;
@@ -26,7 +26,8 @@ BitcoinExchange::BitcoinExchange(string input) {
   while (file && !file.eof()) {
     std::getline(file, hold);
     if (hold.empty())
-      break;
+      continue;
+    ;
     if (hold == "date,exchange_rate")
       continue;
     date = hold.substr(0, hold.find(',', 0));
@@ -38,7 +39,7 @@ BitcoinExchange::BitcoinExchange(string input) {
   convert_rate(input);
 }
 
-bool BitcoinExchange::leap_year(int year) {
+bool BitcoinExchange::leap_year(const int &year) {
   if (year % 400 == 0 && year % 100 == 0)
     return false;
   if (year % 100 != 0 && year % 4 == 0)
@@ -46,7 +47,8 @@ bool BitcoinExchange::leap_year(int year) {
   return true;
 }
 
-bool BitcoinExchange::validate_date(int year, int month, int day) {
+bool BitcoinExchange::validate_date(const int &year, const int &month,
+                                    const int &day) {
   if (month > 12 || day > 31 || day < 1 || month < 1) {
     cerr << "Error: date is wrong" << endl;
     return true;
@@ -70,7 +72,7 @@ bool BitcoinExchange::validate_date(int year, int month, int day) {
   return false;
 }
 
-bool BitcoinExchange::validate_number(float value) {
+bool BitcoinExchange::validate_number(const float &value) {
   if (value > 1000) {
     cerr << "Error: too large a number" << endl;
     return (true);
@@ -82,7 +84,7 @@ bool BitcoinExchange::validate_number(float value) {
   return false;
 }
 
-void BitcoinExchange::convert_rate(string input) {
+void BitcoinExchange::convert_rate(const string &input) {
   std::ifstream file(input);
   string hold, date, nb;
   int year, month, day, new_date;
@@ -137,8 +139,8 @@ void BitcoinExchange::convert_rate(string input) {
       continue;
     }
 
-    std::list<std::pair<int, float> >::iterator hold = csv.begin();
-    for (std::list<std::pair<int, float> >::iterator it = ++csv.begin();
+    std::list<std::pair<int, float>>::iterator hold = csv.begin();
+    for (std::list<std::pair<int, float>>::iterator it = ++csv.begin();
          it != csv.end(); it++) {
       if (new_date == hold->first) {
         cout << date << " => " << value << " = " << std::fixed

@@ -1,27 +1,29 @@
 
 #pragma once
 
-#include <stack>
 #include <iostream>
+#include <stack>
 #include <string>
 
-using std::string;
-using std::cout;
 using std::cerr;
+using std::cout;
+using std::endl;
+using std::string;
 
-
-class RPN
-{
+class RPN {
 private:
-	RPN();
-	RPN(const RPN &src);
-	RPN &operator=(const RPN &src);
+  RPN();
+  RPN(const RPN &src);
+  RPN &operator=(const RPN &src);
 
-	std::stack<int> nb;
-	string input;
+  std::stack<int> stack;
+  string input;
 
-	void validate(string str);
+  bool validate(const string &str);
+  void do_op(const char &c);
+  void rpn();
+
 public:
-	~RPN();
-	RPN(string input);
+  ~RPN();
+  RPN(const string &input);
 };
