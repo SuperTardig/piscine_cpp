@@ -139,8 +139,8 @@ void BitcoinExchange::convert_rate(const string &input) {
       continue;
     }
 
-    std::list<std::pair<int, float>>::iterator hold = csv.begin();
-    for (std::list<std::pair<int, float>>::iterator it = ++csv.begin();
+    std::list<std::pair<int, float> >::iterator hold = csv.begin();
+    for (std::list<std::pair<int, float> >::iterator it = ++csv.begin();
          it != csv.end(); it++) {
       if (new_date == hold->first) {
         cout << date << " => " << value << " = " << std::fixed
