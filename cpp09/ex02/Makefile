@@ -6,12 +6,12 @@
 #    By: bperron <bperron@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 14:30:12 by bperron           #+#    #+#              #
-#    Updated: 2023/04/10 13:00:31 by bperron          ###   ########.fr        #
+#    Updated: 2023/04/11 13:48:58 by bperron          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
-CFLAGS = -Werror -Wall -Wextra -std=c++98
+CFLAGS = -Werror -Wall -Wextra -std=c++98 
 RM = rm -rf
 
 NAME = PmergeMe
