@@ -14,7 +14,7 @@ using std::string;
 
 class BitcoinExchange {
 private:
-  std::list<std::pair<int, float>> csv;
+  std::list<std::pair<int, float> > csv;
 
   BitcoinExchange();
   BitcoinExchange(const BitcoinExchange &src);
