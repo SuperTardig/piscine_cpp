@@ -15,7 +15,7 @@ PmergeMe &PmergeMe::operator=(const PmergeMe &src) {
 PmergeMe::PmergeMe(const string *input, const int &size) {
   long nb;
 
-  for (int i = 0; i < size - 1; i++) {
+  for (int i = 0; i < size; i++) {
     if (input[i].find_first_not_of("0123456789", 0) != input[i].npos) {
       cerr << "Error: unauthorized character present " << endl;
       exit(EXIT_FAILURE);
@@ -48,17 +48,14 @@ void PmergeMe::start(const string *input, const int &size) {
   print(deque, deque.size(), "Before with deque:");
   cout << endl << endl;
   if (is_sorted() == false) {
-    vec_time_start = std::chrono::high_resolution_clock::now();
+    vec_time_start = clock();
     merge_insertion(vec);
-    vec_time_end = std::chrono::high_resolution_clock::now();
-    vec_time_total = std::chrono::duration_cast<std::chrono::duration<double> >(
-        vec_time_end - vec_time_start);
-    deque_time_start = std::chrono::high_resolution_clock::now();
+    vec_time_end = clock();
+    vec_time_total += (double) vec_time_end - vec_time_start;
+    deque_time_start = clock();
     merge_insertion(deque);
-    deque_time_end = std::chrono::high_resolution_clock::now();
-    deque_time_total =
-        std::chrono::duration_cast<std::chrono::duration<double> >(
-            deque_time_end - deque_time_start);
+    deque_time_end = clock();
+    deque_time_total += (double) deque_time_end - deque_time_start;
   }
   print(vec, vec.size(), "After with vector:");
   cout << endl;
@@ -66,27 +63,24 @@ void PmergeMe::start(const string *input, const int &size) {
   cout << endl
        << endl
        << "Time to process a range of " << vec.size()
-       << " elements with std::vector : " << vec_time_total.count() << " us"
+       << " elements with std::vector : " << vec_time_total << " clock tick"
        << endl;
   cout << "Time to process a range of " << deque.size()
-       << " elements with std::deque : " << deque_time_total.count() << " us"
+       << " elements with std::deque : " << deque_time_total << " clock tick"
        << endl;
 }
 
 void PmergeMe::fill_cont(const string *input, const int &size) {
 
   for (int i = 0; i < size; i++) {
-    vec_time_start = std::chrono::high_resolution_clock::now();
+    vec_time_start = clock();
     vec.push_back(std::stoi(input[i]));
-    vec_time_end = std::chrono::high_resolution_clock::now();
-    vec_time_total = std::chrono::duration_cast<std::chrono::duration<double> >(
-        vec_time_end - vec_time_start);
-    deque_time_start = std::chrono::high_resolution_clock::now();
+    vec_time_end = clock();
+    vec_time_total = (double) vec_time_end - vec_time_start;
+    deque_time_start = clock();
     deque.push_back(std::stoi(input[i]));
-    deque_time_end = std::chrono::high_resolution_clock::now();
-    deque_time_total =
-        std::chrono::duration_cast<std::chrono::duration<double> >(
-            deque_time_end - deque_time_start);
+    deque_time_end = clock();
+    deque_time_total = (double) deque_time_end - deque_time_start;
   }
 }
 

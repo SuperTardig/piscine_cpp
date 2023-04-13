@@ -2,7 +2,7 @@
 #pragma once
 
 #include <algorithm>
-#include <chrono>
+#include <ctime>
 #include <deque>
 #include <iostream>
 #include <string>
@@ -18,13 +18,13 @@ private:
   std::vector<int> vec;
   std::deque<int> deque;
 
-  std::chrono::high_resolution_clock::time_point vec_time_start;
-  std::chrono::high_resolution_clock::time_point vec_time_end;
-  std::chrono::duration<double> vec_time_total;
+  clock_t vec_time_start;
+  clock_t vec_time_end;
+  double vec_time_total;
 
-  std::chrono::high_resolution_clock::time_point deque_time_start;
-  std::chrono::high_resolution_clock::time_point deque_time_end;
-  std::chrono::duration<double> deque_time_total;
+  clock_t deque_time_start;
+  clock_t deque_time_end;
+  double deque_time_total;
 
   PmergeMe();
   PmergeMe(const PmergeMe &src);
