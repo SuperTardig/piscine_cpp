@@ -61,7 +61,7 @@ bool BitcoinExchange::validate_date(const int &year, const int &month,
     cerr << "Error: date is wrong" << endl;
     return true;
   }
-  if (leap_year(year) && day == 29) {
+  if (leap_year(year) && day == 29 && month == 2) {
     cerr << "Error: date is wrong" << endl;
     return true;
   }
