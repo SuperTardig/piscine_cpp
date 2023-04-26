@@ -6,4 +6,4 @@ The goal of this 42 school project is to learn C++ by doing small exercise which
   - Module 03: This project teaches us about inheritance
   - Module 04: This project teaches us about abstract class and subtype polymorphism
   - Module 05: This project teaches us about exceptions
-  - Module 06: This project teaches is about 
+  - Module 06: This project teaches us about the different cast of c++
