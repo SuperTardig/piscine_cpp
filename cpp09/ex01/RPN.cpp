@@ -59,7 +59,12 @@ void RPN::do_op(const char &c) {
     stack.push(nb2 * nb1);
     break;
   case '/':
-    stack.push(nb2 / nb1);
+    if (nb1 != 0)
+     stack.push(nb2 / nb1);
+    else{
+     cerr << "Error: division by zero" << endl;
+     exit(EXIT_FAILURE);
+    }
     break;
   }
 }
