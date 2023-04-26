@@ -48,21 +48,21 @@ bool BitcoinExchange::leap_year(const int &year) {
 }
 
 bool BitcoinExchange::validate_date(const int &year, const int &month,
-                                    const int &day) {
+                                    const int &day, const string &date) {
   if (month > 12 || day > 31 || day < 1 || month < 1) {
-    cerr << "Error: date is wrong" << endl;
+    cerr << "Error: bad input => " << date << endl;
     return true;
   }
   if ((month == 4 || month == 6 || month == 9 || month == 11) && day == 31) {
-    cerr << "Error: date is wrong" << endl;
+    cerr << "Error: bad input => " << date << endl;
     return true;
   }
   if (month == 2 && day > 29) {
-    cerr << "Error: date is wrong" << endl;
+    cerr << "Error: bad input => " << date << endl;
     return true;
   }
   if (leap_year(year) && day == 29 && month == 2) {
-    cerr << "Error: date is wrong" << endl;
+    cerr << "Error: bad input => " << date << endl;
     return true;
   }
   if (year < 2009 || (year == 2009 && month == 1 && day == 1)) {
@@ -102,12 +102,12 @@ void BitcoinExchange::convert_rate(const string &input) {
       continue;
 
     if (hold.find('|', 0) != hold.npos) {
-      nb = hold.substr(hold.find('|', 0) + 2, hold.size());
+      nb = hold.substr(hold.find('|', 0) + 1, hold.size());
       if (!nb.empty()) {
         if (nb.find(',', 0) != nb.npos)
           nb.replace(nb.find(',', 0), 1, ".");
         try {
-          if (nb.find_first_not_of("0123456789.", 0) != nb.npos) {
+          if (nb.find_first_not_of(" 0123456789.", 0) != nb.npos) {
             cerr << "Error: wrong character => " << nb << endl;
             continue;
           }
@@ -126,8 +126,12 @@ void BitcoinExchange::convert_rate(const string &input) {
       cerr << "Error: Wrong format => " << hold << endl;
       continue;
     }
+    if (date.find_first_not_of("1234567890-") != date.npos || std::count(date.begin(), date.end(), '-') != 2){
+      cerr << "Error: bad input => " << date << endl;
+      continue;
+    }
     sscanf(date.c_str(), "%d-%d-%d", &year, &month, &day);
-    if (validate_number(value) || validate_date(year, month, day))
+    if (validate_number(value) || validate_date(year, month, day, date))
       continue;
     new_date = (year * 10000) + (month * 100) + day;
     if (new_date < csv.front().first) {

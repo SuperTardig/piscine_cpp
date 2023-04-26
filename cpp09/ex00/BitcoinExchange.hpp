@@ -6,6 +6,7 @@
 #include <iostream>
 #include <list>
 #include <string>
+#include <algorithm>
 
 using std::cerr;
 using std::cout;
@@ -21,7 +22,7 @@ private:
   BitcoinExchange &operator=(const BitcoinExchange &init);
 
   bool validate_number(const float &value);
-  bool validate_date(const int &year, const int &month, const int &day);
+  bool validate_date(const int &year, const int &month, const int &day, const string &date);
   bool leap_year(const int &year);
   void convert_rate(const string &input);
 
